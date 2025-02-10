@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Fruitables - Vegetable Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="lib/animate/animate.css">
+        <link rel="stylesheet" href="css/owl.css">
+
+        <link rel="shortcut icon" href="img/Profile Image-01.jpg" type="image/x-icon">
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="img/Profile Image-01.jpg" type="image/x-icon">
+
+        <style>
+            .dropdown-menu{
+                margin-left: -300px;
+            }
+            .dropdown-menu a {
+  text-decoration: none;
+  color: #000000;
+}
+.dropdown-menu a .d-flex {
+  transition: all 0.5s;
+}
+.dropdown-menu .col-sm-6:nth-child(1) a:hover .d-flex {
+  background-color: var(--bs-warning-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(2) a:hover .d-flex {
+  background-color: var(--bs-danger-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(3) a:hover .d-flex {
+  background-color: var(--bs-success-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(4) a:hover .d-flex {
+  background-color: var(--bs-secondary-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(5) a:hover .d-flex {
+  background-color: var(--bs-tertiary-bg);
+}
+.dropdown-menu .col-sm-6:nth-child(6) a:hover .d-flex {
+  background-color: var(--bs-info-bg-subtle);
+}
+@media (max-width: 1200px) {
+    .dropdown-menu{
+                margin-left: 0px;
+            }
+}
+@media only screen and (min-width: 480px) {
+  .dropdown-menu {
+    width: 55vw;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  .dropdown-menu.show {
+    display: flex;
+  }
+}
+
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid fixed-top">
+            <div class="container topbar d-none d-lg-block" style="background: #Ae2220;">
+                <div class="d-flex justify-content-between">
+                    <div class="top-info ps-2">
+                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">123 Street, New York</a></small>
+                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
+                    </div>
+                    <div class="slide">
+                        <marquee behavior="scroll" direction="left" class="text-white">Our Store Available Bulking Order</marquee>
+                    </div>
+                    <div class="top-link pe-2">
+                        <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                        <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                        <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-0">
+                <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                    <a href="index.html" class="navbar-brand"><img src="img/Rushi Agarbatti Logo.png" alt="" width="80px" height="80px"></a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars" style="color: #Ae2220;"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="shop.html" class="nav-item nav-link">Shop</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">Products <i class="fa fa-angle-down"></i></a>
+                                <div class="dropdown-menu px-3 rounded-3 border-0 shadow">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <h4 class="d-flex align-items-center py-3 px-1 rounded-3">Avaliable Agarbatti & Dhoop Fregrance</h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="Lavnderagarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 rounded-3 fs-1">
+                                                        <img src="img/lavander.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3 ">
+                                                        <h5>Lavender</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="mograagarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-danger-subtle rounded-3 fs-1">
+                                                        <img src="img/MograAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Mogra</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="Pandadi.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-success-subtle rounded-3 fs-1">
+                                                        <img src="img/panadadi.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Pandadi</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="PondsAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-secondary-subtle rounded-3 fs-1">
+                                                        <img src="img/PondasAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Ponds</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="SandalWood.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-body-tertiary rounded-3 fs-1">
+                                                        <img src="img/SandalWood.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>SandalWood</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="KasturiAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/KasturiAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Kasturi</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="RudrakshaAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/RudrakshaAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Rudraksha</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="RoseAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/RoseAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Rose</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="MuskmelonAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/MuskmelonAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Muskmelon</h5>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="SansarAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/SansarAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Sansar</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="MahekAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/MahekAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Mahek</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="ShaligramAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/ShaligramAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Shaligram</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="KaneriAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/KaneriAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Kaneri</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="WoodaamberAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/WoodaamberAgarbatti.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Woodaamber</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="RushiSpecialAgarbatti.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/rushisp.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Rushi SP</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="DhoopCone.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/DhoopCone.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Dhoop Cone</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a href="DhoopStick.html">
+                                                <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                                                    <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                                                        <img src="img/DhoopStick.png" height="70px" width="70px" alt="">
+                                                    </div>
+                                                    <div class="text ps-3">
+                                                        <h5>Dhoop Stick</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                        </div>
+                        <div class="d-flex m-3 me-0">
+                            <a href="Catelouge.pdf" download="Catelouge.pdf">
+                                <button class="btn border border-secondary bg-white me-4"><i class="fa fa-download" style="color: #Ae2220; margin-right: 10px;"></i>Download Catloge</button>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5 wow slideInLeft" data-wow-duration="1.5s">
+            <h1 class="text-center text-white display-6 mt-5 wow bounceInDown" data-wow-duration="2.0s">Contact</h1>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item wow bounceInUp" data-wow-duration="2.5s"><a href="index.html" class="text-secondary">Home</a></li>
+                <li class="breadcrumb-item active text-white wow bounceInUp" data-wow-duration="2.5s">Contact</li>
+            </ol>
+        </div>
+        <!-- Single Page Header End -->
+
+
+        <!-- Contact Start -->
+        <div class="container-fluid contact py-5">
+            <div class="container py-5">
+                <div class="p-5 bg-light rounded">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="text-center mx-auto" style="max-width: 700px;">
+                                <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="wow bounceInDown" data-wow-duration="2.0s">Enquiry For <span style="color: #Ae2220;">Bulk Order</span></h1>
+                                <p class="mb-4 wow slideInLeft" data-wow-duration="2.0s">We’d love to hear from you! Get in touch for orders, inquiries, or feedback.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="h-100 rounded">
+                                <iframe class="rounded w-100 wow zoomIn" data-wow-duration="2.0s" 
+                                style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14699.241815165855!2d72.58689864924563!3d22.920361117925328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8fb276d17ed3%3A0x7dbeaa30bc610ef2!2sRUSHI%20ENTERPRISE!5e0!3m2!1sen!2sin!4v1738733533551!5m2!1sen!2sin" 
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 wow zoomIn" data-wow-duration="2.0s">
+                            <form action="" id="contactForm" method="" class="">
+                                <input type="text" id="name" class="w-100 form-control border-0 py-3 mb-4" placeholder="Your Name" required>
+                                <input type="email" id="email" class="w-100 form-control border-0 py-3 mb-4" placeholder="Enter Your Email" required>
+                                <input type="number" id="phone" class="w-100 form-control border-0 py-3 mb-4" placeholder="Enter Phone Number" required>
+                                <input type="text" id="order" class="w-100 form-control border-0 py-3 mb-4" placeholder="Your Order" required>
+                                <textarea id="message" class="w-100 form-control border-0 mb-4" rows="5" cols="10" placeholder="Your Message"></textarea>
+                                <button class="w-100 btn form-control border-secondary py-3 bg-white" style="color: #Ae2220;" type="submit">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-lg-5 wow zoomIn" data-wow-duration="2.0s">
+                            <div class="d-flex p-4 rounded mb-4 bg-white">
+                                <i class="fas fa-map-marker-alt fa-2x me-4" style="color: #Ae2220;"></i>
+                                <div>
+                                    <a href="https://www.google.com/maps/place/RUSHI+ENTERPRISE/@22.9203611,72.5868986,15z/data=!4m10!1m2!2m1!1sRameshbhai+Estate,+opp.+Shlok+Business+Hub,+behind+Kankuba+Hall,+Aslali,+Ahmedabad,+Gujarat+382427!3m6!1s0x395e8fb276d17ed3:0x7dbeaa30bc610ef2!8m2!3d22.9146173!4d72.5970569!15sCmJSYW1lc2hiaGFpIEVzdGF0ZSwgb3BwLiBTaGxvayBCdXNpbmVzcyBIdWIsIGJlaGluZCBLYW5rdWJhIEhhbGwsIEFzbGFsaSwgQWhtZWRhYmFkLCBHdWphcmF0IDM4MjQyN5IBDG1hbnVmYWN0dXJlcuABAA!16s%2Fg%2F11w_t09ql8?entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                        <h4>Address</h4>
+                                        <p class="mb-2" style="color: #Ae2220;">Rameshbhai Estate, opp. Shlok Business Hub, behind Kankuba Hall, Aslali, Ahmedabad, Gujarat 382427</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="d-flex p-4 rounded mb-4 bg-white">
+                                <i class="fas fa-envelope fa-2x me-4" style="color: #Ae2220;"></i>
+                                <div>
+                                    <a href="mailto:rushiagarbatti@gmail.com
+                                             ?subject=Send%20Your%20Order%20Rushi%20Enterprise">
+                                        <h4>Mail Us</h4>
+                                        <p class="mb-2" style="color: #Ae2220;">rushiagarbatti@gmail.com</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="d-flex p-4 rounded bg-white">
+                                <i class="fa fa-phone-alt fa-2x me-4" style="color: #Ae2220;"></i>
+                                <div>
+                                    <a href="tel:+91 9537418182">
+                                        <h4>Telephone</h4>
+                                        <p class="mb-2" style="color: #Ae2220;">+91 9537418182</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid text-white-50 footer pt-5 mt-5">
+            <div class="container py-5">
+                <div class="pb-4 mb-4" style="border-bottom: 1px solid #E95322 ;">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <a href="#">
+                                <img src="img/Profile Image-01.jpg" width="100px" height="100px" alt="">
+                                <p class="mb-0" style="color: #E95322;">Organic products</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative mx-auto d-none d-lg-block wow slideInUp" data-wow-duration="1.5s">
+                                <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="name" placeholder="Search Product">
+                                <button type="submit" class="btn  border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%; background: #E95322;">Submit Now</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex justify-content-end pt-3">
+                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Why People Like us!</h4>
+                            <p class="mb-4">Entrepreneurs can start small-scale or large-scale manufacturing, with opportunities in wholesale, retail, and online sales. Branding, quality, and unique fragrances play a key role in success.</p>
+                            <a href="about.html" class="btn border-secondary py-2 px-4 rounded-pill" style="color: #Ae2220;">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Shop Info</h4>
+                            <a class="btn-link" href="">About Us</a>
+                            <a class="btn-link" href="">Contact Us</a>
+                            <a class="btn-link" href="">Privacy Policy</a>
+                            <a class="btn-link" href="">Terms & Condition</a>
+                            <a class="btn-link" href="">Return Policy</a>
+                            <a class="btn-link" href="">FAQs & Help</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Products</h4>
+                            <a class="btn-link" href="">My Account</a>
+                            <a class="btn-link" href="">Shop details</a>
+                            <a class="btn-link" href="">Shopping Cart</a>
+                            <a class="btn-link" href="">Wishlist</a>
+                            <a class="btn-link" href="">Order History</a>
+                            <a class="btn-link" href="">International Orders</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Contact</h4>
+                            <p>Address: Rameshbhai Estate, opp. Shlok Business Hub, behind Kankuba Hall, Aslali, Ahmedabad, Gujarat 382427</p>
+                            <p>Email: rushiagarbatti@gmail.com</p>
+                            <p>Phone: +91 9537418182</p>
+                            <p>Payment Accepted</p>
+                            <img src="img/payment.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <!-- <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 my-auto text-center text-md-end text-white">
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Copyright End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/wow/wow.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="js/animation.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("WmyrYf3Wlwm-8wYQL"); // Replace with your EmailJS public key
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let isValid = true;
+            
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const order = document.getElementById("order").value.trim();
+            const message = document.getElementById("message").value.trim();
+            
+            
+            if (isValid) {
+                emailjs.send("service_0nw0h2a", "template_l6mwdyi", {
+                    from_name: name,
+                    from_email: email,
+                    Number: phone,
+                    Order: order,
+                    message: message
+                }, "fVFnZjOQvwD-8lczp") // Add your EmailJS public key
+                .then(function(response) {
+                    alert("Your Message Sent Succesfuuly");
+                    document.getElementById("contactForm").reset();
+                })
+                .catch(function(error) {
+                    console.log("EmailJS Error:", error);
+                    alert("Failed to send email: " + JSON.stringify(error));
+                });
+            }
+        });
+    </script>
+    </body>
+
+</html>
