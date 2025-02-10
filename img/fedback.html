@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .reviews {
+            margin-top: 20px;
+        }
+        .review-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        .review-item h5 {
+            margin: 0;
+        }
+        .review-item p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .review-item .d-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .review-item .fa-star {
+            color: gold;
+            margin-left: 2px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body onload="loadReviews()">
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="feedback" rows="4" placeholder="Your Feedback" required></textarea>
+        <label for="rating">Rating:</label>
+        <select id="rating">
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="1">★☆☆☆☆</option>
+        </select>
+        <button onclick="submitFeedback()">Submit</button>
+    </div>
+    <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
+        <div class="d-flex">
+            <div class="review-item" id="reviewSection">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let feedback = document.getElementById("feedback").value;
+            let rating = document.getElementById("rating").value;
+            let date = new Date().toLocaleDateString();
+
+            if(name && email && feedback) {
+                let review = { name, email, feedback, rating, date };
+                let reviews = JSON.parse(localStorage.getItem("tab-pan")) || [];
+                reviews.push(review);
+                localStorage.setItem("tab-pan", JSON.stringify(reviews));
+
+                displayReviews();
+                alert("Thank you for your feedback!");
+
+
+                // Clear form fields
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("feedback").value = "";
+                document.getElementById("rating").value = "5";
+            } else {
+                alert("Please fill all fields");
+            }
+        }
+
+        function displayReviews() {
+            let reviewSection = document.getElementById("reviewSection");
+            reviewSection.innerHTML = "";
+            let reviews = JSON.parse(localStorage.getItem("tab-pan")) || [];
+            reviews.forEach(review => {
+                let reviewItem = document.createElement("div");
+                reviewItem.classList.add("review-item");
+                let stars = "★".repeat(review.rating) + "☆".repeat(5 - review.rating);
+                reviewItem.innerHTML = `
+                    <p class="mb-2" style="font-size: 14px;">${review.date}</p>
+                    <div class="d-flex justify-content-between">
+                        <h5>${review.name}</h5>
+                        <div class="d-flex mb-3">${stars}</div>
+                    </div>
+                    <p>${review.feedback}</p>
+                `;
+                reviewSection.appendChild(reviewItem);
+            });
+        }
+
+        function loadReviews() {
+            displayReviews();
+        }
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .reviews {
+            margin-top: 20px;
+        }
+        .review-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        .review-item h5 {
+            margin: 0;
+        }
+        .review-item p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .review-item .d-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .review-item .fa-star {
+            color: gold;
+            margin-left: 2px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body onload="loadReviews()">
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <label for="product">Select Product:</label>
+        <select id="product">
+            <option value="Product 1">Product 1</option>
+            <option value="Product 2">Product 2</option>
+            <option value="Product 3">Product 3</option>
+        </select>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="feedback" rows="4" placeholder="Your Feedback" required></textarea>
+        <label for="rating">Rating:</label>
+        <select id="rating">
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="1">★☆☆☆☆</option>
+        </select>
+        <button onclick="submitFeedback()">Submit</button>
+    </div>
+    <div class="reviews">
+        <h2>Reviews</h2>
+        <label for="productFilter">Select Product:</label>
+        <select id="productFilter" onchange="displayReviews()">
+            <option value="Product 1">Product 1</option>
+            <option value="Product 2">Product 2</option>
+            <option value="Product 3">Product 3</option>
+        </select>
+        <div class="tab-pane" id="nav-mission" role="tabpanel" aria-labelledby="nav-mission-tab">
+            <div class="d-flex">
+                <div id="reviewSection" class="review-item"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            let product = document.getElementById("product").value;
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let feedback = document.getElementById("feedback").value;
+            let rating = document.getElementById("rating").value;
+            let date = new Date().toLocaleDateString();
+
+            if (name && email && feedback) {
+                let review = { name, email, feedback, rating, date };
+                let reviews = JSON.parse(localStorage.getItem("reviews")) || {};
+                
+                if (!reviews[product]) {
+                    reviews[product] = [];
+                }
+
+                reviews[product].push(review);
+                localStorage.setItem("reviews", JSON.stringify(reviews));
+
+                displayReviews();
+
+                // Clear form fields
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("feedback").value = "";
+                document.getElementById("rating").value = "5";
+            } else {
+                alert("Please fill all fields");
+            }
+        }
+
+        function displayReviews() {
+            let product = document.getElementById("productFilter").value;
+            let reviewSection = document.getElementById("reviewSection");
+            reviewSection.innerHTML = "";
+            let reviews = JSON.parse(localStorage.getItem("reviews")) || {};
+
+            if (reviews[product]) {
+                reviews[product].forEach(review => {
+                    let reviewItem = document.createElement("div");
+                    reviewItem.classList.add("review-item");
+                    let stars = "★".repeat(review.rating) + "☆".repeat(5 - review.rating);
+                    reviewItem.innerHTML = `
+                        <p class="mb-2" style="font-size: 14px;">${review.date}</p>
+                        <div class="d-flex justify-content-between">
+                            <h5>${review.name}</h5>
+                            <div class="d-flex mb-3">${stars}</div>
+                        </div>
+                        <p>${review.feedback}</p>
+                    `;
+                    reviewSection.appendChild(reviewItem);
+                });
+            }
+        }
+
+        function loadReviews() {
+            displayReviews();
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Fruit Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: none; /* Initially hidden */
+        }
+        li {
+            padding: 10px;
+            background: #f4f4f4;
+            margin: 5px 0;
+            width: 300px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        li.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Fruit Search</h2>
+    <input type="text" id="searchBox" placeholder="Search for a fruit..." onkeyup="searchItems()">
+
+    <ul id="fruitList">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Grape</li>
+        <li>Mango</li>
+    </ul>
+
+    <script>
+        function searchItems() {
+            let query = document.getElementById("searchBox").value.toLowerCase().trim();
+            let items = document.querySelectorAll("#fruitList li");
+            let list = document.getElementById("fruitList");
+
+            // Hide the entire list if the input is empty
+            if (query === "") {
+                list.style.display = "none";
+                return;
+            } else {
+                list.style.display = "block";
+            }
+
+            let hasMatch = false;
+
+            items.forEach(item => {
+                if (item.textContent.toLowerCase().includes(query)) {
+                    item.classList.remove("hidden");
+                    hasMatch = true;
+                } else {
+                    item.classList.add("hidden");
+                }
+            });
+
+            // Hide the list if no matches are found
+            if (!hasMatch) {
+                list.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html> -->
+
