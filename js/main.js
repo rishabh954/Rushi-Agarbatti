@@ -2,11 +2,14 @@
     "use strict";
 
     // Spinner
-    $(window).on('load', function() {
-
-        $('#js-preloader').addClass('loaded');
-
-    });
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner(0);
 
 
     // Fixed Navbar
